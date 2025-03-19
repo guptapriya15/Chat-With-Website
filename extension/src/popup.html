@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with this Website</title>
+    <style>
+      /* Reset and box-sizing to prevent text collapsing */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Ensures padding and borders are within element width/height */
+      }
+
+      /* Body Styling */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px; /* Fixed height for the popup */
+        width: 300px; /* Fixed width for the popup */
+        background-color: #1a202c; /* Dark background */
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      /* Main container */
+      .container {
+        background-color: #2d3748; /* Lighter dark shade */
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        padding: 16px; /* Adjust padding as needed */
+        width: 100%; /* Ensure it fills the popup */
+        height: auto; /* Automatic height based on content */
+      }
+
+      /* Heading styling */
+      .heading {
+        font-size: 20px; /* Adjusted font size for a smaller popup */
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      /* Label styling */
+      label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: white;
+      }
+
+      /* Input field styling */
+      #urlInput {
+        width: 100%; /* Ensure input takes full width */
+        padding: 10px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
+        border-radius: 50px; /* Fully rounded corners */
+        border: 1px solid #4a5568; /* Gray border */
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      /* Input focus state */
+      #urlInput:focus {
+        border-color: #3182ce; /* Blue border on focus */
+      }
+
+      /* Button styling */
+      #redirectBtn {
+        width: 100%; /* Button takes full width */
+        padding: 12px; /* Adjusted padding */
+        font-size: 16px; /* Adjusted font size */
+        font-weight: bold;
+        background-color: #3182ce; /* Blue button */
+        color: white;
+        border: none;
+        border-radius: 50px; /* Fully rounded corners */
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 16px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+      }
+
+      /* Button hover and active states */
+      #redirectBtn:hover {
+        background-color: #2b6cb0; /* Darker blue on hover */
+      }
+
+      #redirectBtn:active {
+        transform: scale(0.98); /* Slightly shrink on click */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main container -->
+    <div class="container">
+      <!-- Heading -->
+      <h1 class="heading">Chat with this Website</h1>
+
+      <!-- Input field for URL -->
+      <div class="form-group">
+        <label for="urlInput">Enter the URL</label>
+        <input type="text" id="urlInput" placeholder="Enter URL" />
+      </div>
+
+      <!-- Go button -->
+      <button id="redirectBtn">Go</button>
+    </div>
+
+    <script src="popup.js" defer></script>
+  </body>
+</html>

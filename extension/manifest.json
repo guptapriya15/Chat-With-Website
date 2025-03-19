@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Chat With Website",
+  "version": "1.0",
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Redirect to URL"
+  },
+  "permissions": ["tabs"]
+}
